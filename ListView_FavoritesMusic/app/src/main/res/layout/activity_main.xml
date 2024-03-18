@@ -14,9 +14,29 @@
         android:textSize="25dp"
         android:gravity="center"/>
 
-    <ListView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/listViewId"/>
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/edtThemBH"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content">
+
+        </EditText>
+
+        <Button
+            android:id="@+id/btnThemBH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="themBH"
+            android:text="Thêm" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listViewId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
 </LinearLayout>
