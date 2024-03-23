@@ -21,7 +21,7 @@ public class ManHinhChiSoBMI extends JFrame {
 	private JTextField txtChieuCao;
 	private JTextField txtCanNang;
 	private JTextField txtChiSo;
-
+	private JTextField txtDanhGia;
 	public ManHinhChiSoBMI() {
 		
 
@@ -72,6 +72,13 @@ public class ManHinhChiSoBMI extends JFrame {
 		txtChiSo.setColumns(10);
 		contentPane.add(txtChiSo);
 		txtChiSo.setEditable(false);
+		
+		txtDanhGia = new JTextField();
+		txtDanhGia.setBounds(191, 218, 180, 26);
+		txtDanhGia.setColumns(10);
+		contentPane.add(txtDanhGia);
+		txtDanhGia.setEditable(false);
+
 
 
 		
