@@ -173,6 +173,67 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+        nhan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(mainScreen.getText() == ""){
+                    so1 = 0;
+                    secondScreen.setText("0 x ");
+                }
+                else{
+                    so1 = Double.parseDouble(mainScreen.getText()+"");
+                    secondScreen.setText(mainScreen.getText().toString()+" x ");
+                    mainScreen.setText("");
+                    tinhToan="";
+                    phepToan = "*";
+                    checkCham=false;
+                    checkBang = false;
+                }
+            }
+        });
+        chia.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(mainScreen.getText() == ""){
+                    so1 = 0;
+                    secondScreen.setText("0 / ");
+                }
+                else{
+                    so1 = Double.parseDouble(mainScreen.getText()+"");
+                    secondScreen.setText(mainScreen.getText().toString()+" / ");
+                    mainScreen.setText("");
+                    tinhToan="";
+                    phepToan = "/";
+                    checkCham=false;
+                    checkBang = false;
+                }
+            }
+        });
+        bang.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(!checkBang){
+                    checkCham = false;
+                    tinhToan = mainScreen.getText().toString();
+                    so2 = Double.parseDouble(mainScreen.getText() + "");
+                    secondScreen.setText(secondScreen.getText().toString() + mainScreen.getText().toString()+"");
+                    mainScreen.setText("");
+                    if(phepToan == "+"){
+                        ketQua = so1 + so2;
+                    }else if(phepToan == "-"){
+                        ketQua = so1 - so2;
+                    }else if(phepToan == "*"){
+                        ketQua = so1 * so2;
+                    }else if(phepToan == "/"){
+                        ketQua = so1 / so2;
+                    }
+                    checkBang = true;
+                    mainScreen.setText(String.valueOf(ketQua));
+                }
+                phepToan = "";
+            }
+        });
+
     }
 
     protected void layid(){
@@ -194,8 +255,8 @@ public class MainActivity extends AppCompatActivity {
         chia = findViewById(R.id.btnChia);
         ac = findViewById(R.id.btnAc);
         ce = findViewById(R.id.btnCe);
-        mainScreen = findViewById(R.id.manhinhnhap);
-        secondScreen = findViewById(R.id.manhinhkq);
+        mainScreen = findViewById(R.id.manHinhKetQua);
+        secondScreen = findViewById(R.id.manHinhNhap);
 
     }
 }
