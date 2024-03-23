@@ -14,14 +14,15 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.text.DecimalFormat;
 import javax.swing.border.BevelBorder;
-public class ManHinhChiSoBIM extends JFrame {
+public class ManHinhChiSoBMI extends JFrame {
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private JTextField txtChieuCao;
+	private JTextField txtCanNang;
 
 
-	public ManHinhChiSoBIM() {
+	public ManHinhChiSoBMI() {
 		
 
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -48,6 +49,18 @@ public class ManHinhChiSoBIM extends JFrame {
 		txtChieuCao.setBounds(164, 99, 207, 26);
 		contentPane.add(txtChieuCao);
 		txtChieuCao.setColumns(10);
+		
+		JLabel lblCnNngkg = new JLabel("Cân nặng(kg)");
+		lblCnNngkg.setBounds(10, 155, 152, 25);
+		lblCnNngkg.setForeground(new Color(0, 128, 0));
+		lblCnNngkg.setFont(new Font("Tahoma", Font.BOLD, 20));
+		contentPane.add(lblCnNngkg);
+		
+		txtCanNang = new JTextField();
+		txtCanNang.setBounds(164, 154, 207, 26);
+		txtCanNang.setColumns(10);
+		contentPane.add(txtCanNang);
+
 
 
 		
