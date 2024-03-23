@@ -216,6 +216,9 @@ public class MainActivity extends AppCompatActivity {
                     checkCham = false;
                     tinhToan = mainScreen.getText().toString();
                     so2 = Double.parseDouble(mainScreen.getText() + "");
+                    if(String.valueOf(so2) == ""){
+                        ketQua = so1;
+                    }
                     secondScreen.setText(secondScreen.getText().toString() + mainScreen.getText().toString()+"");
                     mainScreen.setText("");
                     if(phepToan == "+"){
