@@ -236,6 +236,18 @@ public class MainActivity extends AppCompatActivity {
                 phepToan = "";
             }
         });
+        ce.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               if(!checkBang){
+                   String val = mainScreen.getText().toString();
+                   if(!val.isEmpty()){
+                       val = val.substring(0,val.length() - 1);
+                       mainScreen.setText(val);
+                   }
+               }
+            }
+        });
 
     }
 
