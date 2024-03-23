@@ -215,7 +215,7 @@ public class MainActivity extends AppCompatActivity {
                 if(!checkBang){
                     checkCham = false;
                     tinhToan = mainScreen.getText().toString();
-                    so2 = Double.parseDouble(mainScreen.getText() + "");
+                    so2 = Double.parseDouble(mainScreen.getText()+"");
                     if(String.valueOf(so2) == ""){
                         ketQua = so1;
                     }
