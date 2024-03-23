@@ -34,6 +34,33 @@ public class MainActivity extends AppCompatActivity {
                 checkCham = false;
             }
         });
+        btn0.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(!checkBang){
+                    tinhToan = mainScreen.getText().toString();
+                    mainScreen.setText(tinhToan + "0");
+                }
+            }
+        });
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(!checkBang){
+                    tinhToan = mainScreen.getText().toString();
+                    mainScreen.setText(tinhToan + "1");
+                }
+            }
+        });
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(!checkBang){
+                    tinhToan = mainScreen.getText().toString();
+                    mainScreen.setText(tinhToan + "2");
+                }
+            }
+        });
     }
 
     protected void layid(){
