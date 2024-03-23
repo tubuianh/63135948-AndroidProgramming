@@ -84,7 +84,13 @@ public class ManHinhChiSoBMI extends JFrame {
 		btnTinh.setBounds(79, 294, 90, 33);
 		btnTinh.setForeground(new Color(0, 128, 0));
 		btnTinh.setFont(new Font("Tahoma", Font.BOLD, 20));
-		contentPane.add(btnTinh);
+		contentPane.add(btnTinh);btnTinh.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				HamXuLyTinhToan();
+			}
+		});
+		
+		
 
 
 
@@ -92,5 +98,33 @@ public class ManHinhChiSoBMI extends JFrame {
 		
 		
 	}
-	
+	void HamXuLyTinhToan() {
+		String chieuCao = txtChieuCao.getText();
+		String canNang = txtCanNang.getText();
+		
+		double soChieuCao = Double.parseDouble(chieuCao);
+		double soCanNang = Double.parseDouble(canNang);
+		double soChieuCaoM = soChieuCao / 100;
+		double bim = soCanNang / (soChieuCaoM*soChieuCaoM);
+		DecimalFormat decimalFormat = new DecimalFormat("#.##");
+		String formattedBim = decimalFormat.format(bim);
+		
+		txtChiSo.setText(formattedBim);
+		txtChiSo.setEditable(false);
+		if (bim < 18.5) {
+		    txtDanhGia.setText("Dưới chuẩn");
+		} else if (bim >= 18.5 && bim <= 24.9) {
+		    txtDanhGia.setText("Bình thường");
+		} else if (bim >= 25 && bim <= 29.9) {
+		    txtDanhGia.setText("Thừa cân");
+		} else if (bim >= 30 && bim <= 34.9) {
+		    txtDanhGia.setText("Béo phì cấp độ 1");
+		} else if (bim >= 35 && bim <= 39.9) {
+		    txtDanhGia.setText("Béo phì cấp độ 2");
+		} else {
+		    txtDanhGia.setText("Béo phì cấp độ 3");
+		}
+		txtDanhGia.setEditable(false);
+
+	}
 }
