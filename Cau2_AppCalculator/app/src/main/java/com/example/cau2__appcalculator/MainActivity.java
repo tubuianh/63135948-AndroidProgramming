@@ -61,6 +61,78 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+        btn3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(!checkBang){
+                    tinhToan = mainScreen.getText().toString();
+                    mainScreen.setText(tinhToan + "3");
+                }
+            }
+        });
+        btn4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(!checkBang){
+                    tinhToan = mainScreen.getText().toString();
+                    mainScreen.setText(tinhToan + "4");
+                }
+            }
+        });
+        btn5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(!checkBang){
+                    tinhToan = mainScreen.getText().toString();
+                    mainScreen.setText(tinhToan + "5");
+                }
+            }
+        });
+        btn6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(!checkBang){
+                    tinhToan = mainScreen.getText().toString();
+                    mainScreen.setText(tinhToan + "6");
+                }
+            }
+        });
+        btn7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(!checkBang){
+                    tinhToan = mainScreen.getText().toString();
+                    mainScreen.setText(tinhToan + "7");
+                }
+            }
+        });
+        btn8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(!checkBang){
+                    tinhToan = mainScreen.getText().toString();
+                    mainScreen.setText(tinhToan + "8");
+                }
+            }
+        });
+        btn9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(!checkBang){
+                    tinhToan = mainScreen.getText().toString();
+                    mainScreen.setText(tinhToan + "9");
+                }
+            }
+        });
+        cong.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(!checkBang){
+                    tinhToan = mainScreen.getText().toString();
+                    mainScreen.setText(tinhToan + "+");
+                }
+            }
+        });
     }
 
     protected void layid(){
