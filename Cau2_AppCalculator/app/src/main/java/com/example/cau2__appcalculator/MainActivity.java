@@ -124,12 +124,52 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-        cong.setOnClickListener(new View.OnClickListener() {
+        btncham.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(!checkBang){
-                    tinhToan = mainScreen.getText().toString();
-                    mainScreen.setText(tinhToan + "+");
+                    if(!checkCham){
+                        tinhToan = mainScreen.getText().toString();
+                        mainScreen.setText(tinhToan + ".");
+                        checkCham = true;
+                    }
+
+                }
+            }
+        });
+        cong.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               if(mainScreen.getText() == ""){
+                   so1 = 0;
+                   secondScreen.setText("0 + ");
+               }
+               else{
+                   so1 = Double.parseDouble(mainScreen.getText()+"");
+                   secondScreen.setText(mainScreen.getText().toString()+" + ");
+                   mainScreen.setText("");
+                   tinhToan="";
+                   phepToan = "+";
+                   checkCham=false;
+                   checkBang = false;
+               }
+            }
+        });
+        tru.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(mainScreen.getText() == ""){
+                    so1 = 0;
+                    secondScreen.setText("0 - ");
+                }
+                else{
+                    so1 = Double.parseDouble(mainScreen.getText()+"");
+                    secondScreen.setText(mainScreen.getText().toString()+" - ");
+                    mainScreen.setText("");
+                    tinhToan="";
+                    phepToan = "-";
+                    checkCham=false;
+                    checkBang = false;
                 }
             }
         });
