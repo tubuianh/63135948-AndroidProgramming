@@ -23,6 +23,7 @@ public class ManHinhChiSoBMI extends JFrame {
 	private JTextField txtChiSo;
 	private JTextField txtDanhGia;
 	private JButton btnTinh;
+	private JButton btnXoa;
 	public ManHinhChiSoBMI() {
 		
 
@@ -90,11 +91,12 @@ public class ManHinhChiSoBMI extends JFrame {
 			}
 		});
 		
+		btnXoa = new JButton("Xóa");
+		btnXoa.setBounds(218, 294, 90, 33);
 		
-
-
-
-		
+		btnXoa.setForeground(new Color(0, 128, 0));
+		btnXoa.setFont(new Font("Tahoma", Font.BOLD, 20));
+		contentPane.add(btnXoa);
 		
 		
 	}
