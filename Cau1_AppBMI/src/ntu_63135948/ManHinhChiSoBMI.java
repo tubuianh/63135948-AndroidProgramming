@@ -20,7 +20,7 @@ public class ManHinhChiSoBMI extends JFrame {
 	private JPanel contentPane;
 	private JTextField txtChieuCao;
 	private JTextField txtCanNang;
-
+	private JTextField txtChiSo;
 
 	public ManHinhChiSoBMI() {
 		
@@ -61,6 +61,17 @@ public class ManHinhChiSoBMI extends JFrame {
 		txtCanNang.setColumns(10);
 		contentPane.add(txtCanNang);
 
+		JLabel lblBim = new JLabel("BIM");
+		lblBim.setBounds(10, 218, 59, 25);
+		lblBim.setForeground(new Color(0, 128, 0));
+		lblBim.setFont(new Font("Tahoma", Font.BOLD, 20));
+		contentPane.add(lblBim);
+		
+		txtChiSo = new JTextField();
+		txtChiSo.setBounds(79, 218, 102, 26);
+		txtChiSo.setColumns(10);
+		contentPane.add(txtChiSo);
+		txtChiSo.setEditable(false);
 
 
 		
