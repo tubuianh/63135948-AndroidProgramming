@@ -6,6 +6,8 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import java.awt.Color;
+import java.awt.Dimension;
+
 import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.JTextField;
@@ -14,6 +16,8 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.text.DecimalFormat;
 import javax.swing.border.BevelBorder;
+import javax.swing.ImageIcon;
+import javax.swing.SwingConstants;
 public class ManHinhChiSoBMI extends JFrame {
 
 	private static final long serialVersionUID = 1L;
@@ -107,6 +111,15 @@ public class ManHinhChiSoBMI extends JFrame {
 		btnXoa.setForeground(new Color(0, 128, 0));
 		btnXoa.setFont(new Font("Tahoma", Font.BOLD, 20));
 		contentPane.add(btnXoa);
+		
+		JLabel lblNewLabel_1 = new JLabel("");
+		lblNewLabel_1.setIcon(new ImageIcon("D:\\BMI_image.png"));
+		lblNewLabel_1.setBounds(10, 365, 361, 100);
+
+		
+
+		contentPane.add(lblNewLabel_1);
+		
 		
 		
 	}
