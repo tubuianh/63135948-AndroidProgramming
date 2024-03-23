@@ -83,17 +83,27 @@ public class ManHinhChiSoBMI extends JFrame {
 
 		JButton btnTinh = new JButton("Tính");
 		btnTinh.setBounds(79, 294, 90, 33);
-		btnTinh.setForeground(new Color(0, 128, 0));
-		btnTinh.setFont(new Font("Tahoma", Font.BOLD, 20));
-		contentPane.add(btnTinh);btnTinh.addActionListener(new ActionListener() {
+		btnTinh.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				HamXuLyTinhToan();
 			}
 		});
+		btnTinh.setForeground(new Color(0, 128, 0));
+		btnTinh.setFont(new Font("Tahoma", Font.BOLD, 20));
+		contentPane.add(btnTinh);
+		
 		
 		btnXoa = new JButton("Xóa");
 		btnXoa.setBounds(218, 294, 90, 33);
-		
+		btnXoa.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				txtChieuCao.setText("");
+				txtCanNang.setText("");
+				txtChiSo.setText("");
+				txtDanhGia.setText("");
+			}
+		});
+
 		btnXoa.setForeground(new Color(0, 128, 0));
 		btnXoa.setFont(new Font("Tahoma", Font.BOLD, 20));
 		contentPane.add(btnXoa);
