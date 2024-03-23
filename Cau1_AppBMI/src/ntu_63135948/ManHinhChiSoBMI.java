@@ -18,6 +18,8 @@ import java.text.DecimalFormat;
 import javax.swing.border.BevelBorder;
 import javax.swing.ImageIcon;
 import javax.swing.SwingConstants;
+import javax.swing.*;
+import java.awt.*;
 public class ManHinhChiSoBMI extends JFrame {
 
 	private static final long serialVersionUID = 1L;
@@ -112,14 +114,14 @@ public class ManHinhChiSoBMI extends JFrame {
 		btnXoa.setFont(new Font("Tahoma", Font.BOLD, 20));
 		contentPane.add(btnXoa);
 		
-		JLabel lblNewLabel_1 = new JLabel("");
-		lblNewLabel_1.setIcon(new ImageIcon("D:\\BMI_image.png"));
-		lblNewLabel_1.setBounds(10, 365, 361, 100);
+		ImageIcon imageIcon = new ImageIcon("D:\\BMI_image");
+		JLabel imageLabel = new JLabel();
+        imageLabel.setIcon(imageIcon);
+        int width = imageIcon.getIconWidth();
+        int height = imageIcon.getIconHeight();
+        imageLabel.setPreferredSize(new Dimension(width, height));
 
-		
-
-		contentPane.add(lblNewLabel_1);
-		
+        contentPane.add(imageLabel);
 		
 		
 	}
