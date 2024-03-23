@@ -18,8 +18,7 @@ import java.text.DecimalFormat;
 import javax.swing.border.BevelBorder;
 import javax.swing.ImageIcon;
 import javax.swing.SwingConstants;
-import javax.swing.*;
-import java.awt.*;
+
 public class ManHinhChiSoBMI extends JFrame {
 
 	private static final long serialVersionUID = 1L;
@@ -31,10 +30,11 @@ public class ManHinhChiSoBMI extends JFrame {
 	private JButton btnTinh;
 	private JButton btnXoa;
 	public ManHinhChiSoBMI() {
+		setTitle("Đo Chỉ Số BMI");
 		
 
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 399, 526);
+		setBounds(100, 100, 399, 580);
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(154, 205, 50));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -42,7 +42,7 @@ public class ManHinhChiSoBMI extends JFrame {
 		contentPane.setLayout(null);
 		
 		JLabel lblNewLabel = new JLabel("Chỉ Số Cơ Thể");
-		lblNewLabel.setBounds(126, 11, 137, 25);
+		lblNewLabel.setBounds(126, 25, 137, 25);
 		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 20));
 		lblNewLabel.setForeground(new Color(0, 128, 0));
 		contentPane.add(lblNewLabel);
@@ -88,7 +88,7 @@ public class ManHinhChiSoBMI extends JFrame {
 		txtDanhGia.setEditable(false);
 
 		JButton btnTinh = new JButton("Tính");
-		btnTinh.setBounds(79, 294, 90, 33);
+		btnTinh.setBounds(79, 270, 90, 33);
 		btnTinh.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				HamXuLyTinhToan();
@@ -100,7 +100,7 @@ public class ManHinhChiSoBMI extends JFrame {
 		
 		
 		btnXoa = new JButton("Xóa");
-		btnXoa.setBounds(218, 294, 90, 33);
+		btnXoa.setBounds(218, 270, 90, 33);
 		btnXoa.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				txtChieuCao.setText("");
@@ -114,14 +114,12 @@ public class ManHinhChiSoBMI extends JFrame {
 		btnXoa.setFont(new Font("Tahoma", Font.BOLD, 20));
 		contentPane.add(btnXoa);
 		
-		ImageIcon imageIcon = new ImageIcon("D:\\BMI_image");
-		JLabel imageLabel = new JLabel();
-        imageLabel.setIcon(imageIcon);
-        int width = imageIcon.getIconWidth();
-        int height = imageIcon.getIconHeight();
-        imageLabel.setPreferredSize(new Dimension(width, height));
-
-        contentPane.add(imageLabel);
+		JLabel lblNewLabel_1 = new JLabel("");
+		lblNewLabel_1.setIcon(new ImageIcon("D:\\img_bmi.png"));
+		lblNewLabel_1.setBounds(10, 315, 360, 220);
+		contentPane.add(lblNewLabel_1);
+		
+		
 		
 		
 	}
@@ -139,17 +137,15 @@ public class ManHinhChiSoBMI extends JFrame {
 		txtChiSo.setText(formattedBim);
 		txtChiSo.setEditable(false);
 		if (bim < 18.5) {
-		    txtDanhGia.setText("Dưới chuẩn");
+		    txtDanhGia.setText("Thiếu cân");
 		} else if (bim >= 18.5 && bim <= 24.9) {
-		    txtDanhGia.setText("Bình thường");
+		    txtDanhGia.setText("Cân đối");
 		} else if (bim >= 25 && bim <= 29.9) {
 		    txtDanhGia.setText("Thừa cân");
 		} else if (bim >= 30 && bim <= 34.9) {
-		    txtDanhGia.setText("Béo phì cấp độ 1");
-		} else if (bim >= 35 && bim <= 39.9) {
-		    txtDanhGia.setText("Béo phì cấp độ 2");
-		} else {
-		    txtDanhGia.setText("Béo phì cấp độ 3");
+		    txtDanhGia.setText("Béo phì");
+		} else if (bim >= 35) {
+		    txtDanhGia.setText("Béo phì nguy hiểm");
 		}
 		txtDanhGia.setEditable(false);
 
