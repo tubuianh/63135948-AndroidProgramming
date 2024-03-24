@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(!checkBang){
                     tinhToan = mainScreen.getText().toString();
-                    mainScreen.setText(tinhToan + "0");
+                    mainScreen.setText(String.valueOf(tinhToan + "0"));
                 }
             }
         });
@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(!checkBang){
                     tinhToan = mainScreen.getText().toString();
-                    mainScreen.setText(tinhToan + "1");
+                    mainScreen.setText(String.valueOf(tinhToan + "1"));
                 }
             }
         });
@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(!checkBang){
                     tinhToan = mainScreen.getText().toString();
-                    mainScreen.setText(tinhToan + "2");
+                    mainScreen.setText(String.valueOf(tinhToan + "2"));
                 }
             }
         });
@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(!checkBang){
                     tinhToan = mainScreen.getText().toString();
-                    mainScreen.setText(tinhToan + "3");
+                    mainScreen.setText(String.valueOf(tinhToan + "3"));
                 }
             }
         });
@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(!checkBang){
                     tinhToan = mainScreen.getText().toString();
-                    mainScreen.setText(tinhToan + "4");
+                    mainScreen.setText(String.valueOf(tinhToan + "4"));
                 }
             }
         });
@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(!checkBang){
                     tinhToan = mainScreen.getText().toString();
-                    mainScreen.setText(tinhToan + "5");
+                    mainScreen.setText(String.valueOf(tinhToan + "5"));
                 }
             }
         });
@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(!checkBang){
                     tinhToan = mainScreen.getText().toString();
-                    mainScreen.setText(tinhToan + "6");
+                    mainScreen.setText(String.valueOf(tinhToan + "6"));
                 }
             }
         });
@@ -102,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(!checkBang){
                     tinhToan = mainScreen.getText().toString();
-                    mainScreen.setText(tinhToan + "7");
+                    mainScreen.setText(String.valueOf(tinhToan + "7"));
                 }
             }
         });
@@ -111,7 +111,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(!checkBang){
                     tinhToan = mainScreen.getText().toString();
-                    mainScreen.setText(tinhToan + "8");
+                    mainScreen.setText(String.valueOf(tinhToan + "8"));
                 }
             }
         });
@@ -120,7 +120,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(!checkBang){
                     tinhToan = mainScreen.getText().toString();
-                    mainScreen.setText(tinhToan + "9");
+                    mainScreen.setText(String.valueOf(tinhToan + "9"));
                 }
             }
         });
@@ -130,7 +130,7 @@ public class MainActivity extends AppCompatActivity {
                 if(!checkBang){
                     if(!checkCham){
                         tinhToan = mainScreen.getText().toString();
-                        mainScreen.setText(tinhToan + ".");
+                        mainScreen.setText(String.valueOf(tinhToan + "."));
                         checkCham = true;
                     }
 
@@ -145,7 +145,7 @@ public class MainActivity extends AppCompatActivity {
                    secondScreen.setText("0 + ");
                }
                else{
-                   so1 = Double.parseDouble(mainScreen.getText()+"");
+                   so1 = Double.parseDouble(String.valueOf(mainScreen.getText()));
                    secondScreen.setText(mainScreen.getText().toString()+" + ");
                    mainScreen.setText("");
                    tinhToan="";
@@ -163,7 +163,7 @@ public class MainActivity extends AppCompatActivity {
                     secondScreen.setText("0 - ");
                 }
                 else{
-                    so1 = Double.parseDouble(mainScreen.getText()+"");
+                    so1 = Double.parseDouble(String.valueOf(mainScreen.getText()));
                     secondScreen.setText(mainScreen.getText().toString()+" - ");
                     mainScreen.setText("");
                     tinhToan="";
@@ -181,7 +181,7 @@ public class MainActivity extends AppCompatActivity {
                     secondScreen.setText("0 x ");
                 }
                 else{
-                    so1 = Double.parseDouble(mainScreen.getText()+"");
+                    so1 = Double.parseDouble(String.valueOf(mainScreen.getText()));
                     secondScreen.setText(mainScreen.getText().toString()+" x ");
                     mainScreen.setText("");
                     tinhToan="";
@@ -199,7 +199,7 @@ public class MainActivity extends AppCompatActivity {
                     secondScreen.setText("0 / ");
                 }
                 else{
-                    so1 = Double.parseDouble(mainScreen.getText()+"");
+                    so1 = Double.parseDouble(String.valueOf(mainScreen.getText()));
                     secondScreen.setText(mainScreen.getText().toString()+" / ");
                     mainScreen.setText("");
                     tinhToan="";
@@ -215,11 +215,11 @@ public class MainActivity extends AppCompatActivity {
                 if(!checkBang){
                     checkCham = false;
                     tinhToan = mainScreen.getText().toString();
-                    so2 = Double.parseDouble(mainScreen.getText()+"");
+                    so2 = Double.parseDouble(String.valueOf(mainScreen.getText()));
                     if(String.valueOf(so2) == ""){
                         ketQua = so1;
                     }
-                    secondScreen.setText(secondScreen.getText().toString() + mainScreen.getText().toString()+"");
+                    secondScreen.setText(String.valueOf(secondScreen.getText().toString() +mainScreen.getText().toString()));
                     mainScreen.setText("");
                     if(phepToan == "+"){
                         ketQua = so1 + so2;
