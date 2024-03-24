@@ -1,4 +1,4 @@
-package ntu_63135948;
+package app_bmi;
 
 public class ChuongTrinhTinhBMI {
 
