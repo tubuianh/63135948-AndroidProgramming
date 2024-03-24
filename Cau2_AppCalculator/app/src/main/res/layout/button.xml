@@ -154,7 +154,7 @@
             android:backgroundTint="#474A4C"
             android:text="."
             android:layout_marginLeft="8dp"
-            android:textSize="30sp">
+            android:textSize="40sp">
 
         </Button>
 
@@ -219,7 +219,7 @@
             android:backgroundTint="#FF8707"
             android:text="-"
             android:layout_marginLeft="8dp"
-            android:textSize="30sp">
+            android:textSize="40sp">
 
         </Button>
 
