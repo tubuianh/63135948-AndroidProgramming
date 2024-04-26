@@ -56,7 +56,7 @@
         android:layout_height="wrap_content"
         android:textSize="25sp"
         android:layout_marginBottom="20dp"
-        android:text="Submit" />
+        android:text="Xác nhận" />
 
     <TextView
         android:id="@+id/cauhoi2"
@@ -107,7 +107,7 @@
         android:layout_height="wrap_content"
         android:textSize="25sp"
         android:layout_marginBottom="20dp"
-        android:text="Submit" />
+        android:text="Xác nhận" />
 
 
 </LinearLayout>
