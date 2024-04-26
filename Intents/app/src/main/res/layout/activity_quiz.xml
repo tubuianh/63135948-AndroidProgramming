@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ActivityQuiz">
+
+    <TextView
+        android:id="@+id/cauhoi1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:text="Câu hỏi 1: 20 x 10 bằng bao nhiêu?" />
+
+    <RadioGroup
+        android:id="@+id/dapAnCauHoi1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/a1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:text="201" />
+
+        <RadioButton
+            android:id="@+id/b1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:text="200" />
+
+        <RadioButton
+            android:id="@+id/c1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:text="250" />
+
+        <RadioButton
+            android:id="@+id/d1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:text="220" />
+    </RadioGroup>
+
+    <!-- Các câu hỏi khác tương tự -->
+
+    <Button
+        android:id="@+id/submitBtn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:layout_marginBottom="20dp"
+        android:text="Submit" />
+
+    <TextView
+        android:id="@+id/cauhoi2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:text="Câu hỏi 2: Microsoft Word là gì?" />
+
+    <RadioGroup
+        android:id="@+id/dapAnCauHoi2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/a2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:text="Một phần mềm chỉnh sửa ảnh" />
+
+        <RadioButton
+            android:id="@+id/b2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:text="Một phần mềm làm slide" />
+
+        <RadioButton
+            android:id="@+id/c2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:text="Một phần mềm xử lý văn bản" />
+
+        <RadioButton
+            android:id="@+id/d2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:text="Một phần mềm thiết kế đồ họa" />
+    </RadioGroup>
+
+    <!-- Các câu hỏi khác tương tự -->
+
+    <Button
+        android:id="@+id/submitBtn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:layout_marginBottom="20dp"
+        android:text="Submit" />
+
+
+</LinearLayout>
